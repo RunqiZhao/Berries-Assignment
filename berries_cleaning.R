@@ -162,3 +162,5 @@ unique(stb$Value) # Values
 stb <- rename(stb, Production = type, Measures = measure, Avg = other, Materials = DC_right_r, Values = Value)
 stb <- select(stb, Year, State, Production, Measures, Avg, Materials, Chemical, Values)
 stb[is.na(stb)] <- " "
+
+save(stb, file = "strawberries.Rdata")
