@@ -146,9 +146,10 @@ stb <- select(stb, -DC_right_l)
 unique(paste(stb$D_left, stb$D_right))
 
 stb <- mutate(stb, D_left = "CHEMICAL", D_left = "") 
+stb[is.na(stb)] <- " "
 stb <- mutate(stb, Chemical=paste(D_left, D_right)) 
 stb <- select(stb, -c(D_left, D_right)) 
-
+stb[is.na(stb)] <- " "
 stb <- mutate(stb, Chemical = str_trim(paste(DC_left_r, Chemical)))
 
 stb <- select(stb, Year, State, type, measure, other, DC_right_r, Chemical, Value )
