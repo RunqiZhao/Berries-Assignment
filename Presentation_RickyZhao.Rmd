@@ -386,4 +386,9 @@ p4 <- ggplot(ay4, aes(x = State, y = Values)) +
 grid.arrange(p3, p4, ncol=2)
 ```
 
+# References
 
+1. Edwin de Jonge, Mark van der Loo, An introduction to data cleaning with R.
+2. Rstudio tutorial. https://shiny.rstudio.com/tutorial/written-tutorial/lesson6/
+3. http://rstudio.github.io/shiny/tutorial/
+4. Garrett Grolemund, Hadley Wickham, R for Data Science, https://r4ds.had.co.nz/
